@@ -19,7 +19,7 @@ const Login = () => {
   useEffect(() => {
     if (Cookies.get("aflog") || user) navigate("/");
 
-    dispatch(reset());
+    return () => dispatch(reset());
   }, [user, navigate, dispatch]);
 
   const submitHandler = (e) => {
