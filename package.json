@@ -1,0 +1,33 @@
+{
+  "name": "mern-peduli-diri",
+  "version": "1.0.0",
+  "description": "MERN Peduli Diri - MongoDB, Express JS, React JS, Node JS",
+  "main": "index.js",
+  "repository": "https://github.com/ilhamjkid/mern-peduli-diri.git",
+  "author": "ilhamjkid <ilhamjkid1724@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/index",
+    "server": "nodemon backend/index",
+    "client": "yarn --cwd frontend start",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "yarn install && yarn --cwd ./frontend install && yarn --cwd ./frontend run build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cwd": "^0.10.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16"
+  }
+}
