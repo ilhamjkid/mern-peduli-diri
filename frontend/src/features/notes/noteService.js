@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const URL = "http://localhost:5000/api/notes/";
-const TOKEN_URL = "http://localhost:5000/api/users/refresh/";
+const URL = "/api/notes/";
+const TOKEN_URL = "/api/users/refresh/";
 
 const getNotes = async () => {
   const responseToken = await axios.get(TOKEN_URL);

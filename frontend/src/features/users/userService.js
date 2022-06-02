@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const URL = "http://localhost:5000/api/users/";
+const URL = "/api/users/";
 
 export const getUser = async () => {
   const responseToken = await axios.get(URL + "refresh");
